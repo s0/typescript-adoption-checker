@@ -1,0 +1,3 @@
+[submodule "external/npm-registry-client"]
+	path = external/npm-registry-client
+	url = https://github.com/samlanning/npm-registry-client.git
