@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "yarn run fix-symlink; gulp",
-    "now-build": "git submodule update --init; yarn run fix-symlink; yarn run build-external; gulp",
+    "now-build": "git clone https://github.com/samlanning/npm-registry-client.git external/npm-registry-client; yarn run fix-symlink; yarn run build-external; gulp",
     "build-external": "yarn --cwd external/npm-registry-client run build",
     "fix-symlink": "rm -rf node_modules/@samlanning/npm-registry-client; mkdir -p node_modules/@samlanning; ln -s ../../external/npm-registry-client/dist node_modules/@samlanning/npm-registry-client"
   },
