@@ -23,5 +23,10 @@
   },
   "scripts": {
     "build": "gulp"
+  },
+  "dependencies": {
+    "@types/request-promise-native": "^1.0.16",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
   }
 }
