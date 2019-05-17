@@ -2,8 +2,6 @@ import * as npm from '@samlanning/npm-registry-client';
 
 const PACKAGES = ['npm-registry-client', '@synesthesia-project/light-desk', 'tree-sitter', 'express', 'something-non-existent'];
 
-console.log ('hello world');
-
 type PackageInfo =
 {
   result: 'error';
