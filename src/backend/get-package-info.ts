@@ -5,5 +5,5 @@ import {getInfo} from './';
 export default async (req: Request, res: Response) => {
   console.log(req.url);
   const info = await getInfo('express');
-  res.end(JSON.stringify(info));
+  res.end('result: ' + JSON.stringify(info));
 };
