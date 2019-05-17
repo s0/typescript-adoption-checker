@@ -3,7 +3,7 @@
   "name": "typescript-adoption-checker",
   "builds": [
     {
-      "src": "api/get-package-info",
+      "src": "api/**/*",
       "use": "@now/node"
     },
     {
