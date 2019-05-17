@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "typescript-adoption-checker",
+  "builds": [
+    {
+      "src": "api/get-package-info",
+      "use": "@now/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build/frontend" }
+    }
+  ]
+}

@@ -22,7 +22,10 @@
     "typescript": "^2.7.2"
   },
   "scripts": {
-    "build": "gulp"
+    "build": "yarn run fix-symlink; gulp",
+    "now-build": "yarn run fix-symlink; yarn run build-external; gulp",
+    "build-external": "yarn --cwd external/npm-registry-client run build",
+    "fix-symlink": "rm -rf node_modules/@samlanning/npm-registry-client; mkdir -p node_modules/@samlanning; ln -s ../../external/npm-registry-client/dist node_modules/@samlanning/npm-registry-client"
   },
   "dependencies": {
     "@types/request-promise-native": "^1.0.16",

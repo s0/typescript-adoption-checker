@@ -16,7 +16,7 @@ type PackageInfo =
  *
  * @param pkg the name of the npm package
  */
-async function getInfo(pkg: string): Promise<PackageInfo> {
+export async function getInfo(pkg: string): Promise<PackageInfo> {
 
   const data = await npm.getPackageMeta(pkg).catch(err => {
     if (err.statusCode !== 404) console.error(err);
@@ -61,10 +61,9 @@ async function getInfo(pkg: string): Promise<PackageInfo> {
 
 }
 
-async function printInfo(pkg: string) {
+export async function printInfo(pkg: string) {
   const info = await getInfo(pkg);
   console.log(pkg, info);
 }
-
 
 PACKAGES.map(printInfo);

@@ -40,10 +40,14 @@ gulp.task('tslint', function() {
   .pipe(gulpTslint.report());
 });
 
+gulp.task('copy-html', function () {
+  return gulp.src(['src/frontend/*.html']).pipe(gulp.dest('build/frontend'));
+});
+
 gulp.task('default', function(callback) {
   runSequence(
     'clean',
-    'ts',
+    ['ts', 'copy-html'],
     'tslint',
     callback);
 });
